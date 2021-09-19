@@ -371,9 +371,12 @@ class DetailMatch extends React.Component {
             if (this.type === 1) {
                 while (1) {
                     try {
-                        const matchId = await contract.startMatch({
-                            id: cMatch.id,
-                        });
+                        const matchId = await contract.startMatch(
+                            {
+                                id: cMatch.id,
+                            },
+                            300000000000000,
+                        );
                         if (matchId === cMatch.id) {
                             ret = true;
                             break;
