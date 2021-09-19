@@ -7,6 +7,8 @@
 - See full presentation video about GeFi at [here](https://drive.google.com/file/d/1eDRzMy9RQztbbEwTmqtrDiYRv0IrqSFU/view?usp=sharing)
 - Our presentation at [here](https://docs.google.com/presentation/d/1A5BFNOpWhPq0lasenY7i9LesMRQ4PlyL/edit?usp=sharing&ouid=105350664043340718527&rtpof=true&sd=true)
 
+- Full folder at [here](https://drive.google.com/drive/folders/1KWIWwd5ZQqUTIgFyPjnWHhq8l6zPqSXk)
+
 ## Project structure
 
 This project have 4 sub-project
