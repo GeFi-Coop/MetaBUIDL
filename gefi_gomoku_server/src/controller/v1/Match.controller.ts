@@ -385,7 +385,7 @@ class MatchController implements ICRUD {
         if (!validResult.isValid) {
             return socket.emit('error', {
                 code: validResult.reason,
-                resource: 'match::finish',
+                resource: 'match::complete',
             });
         }
 
@@ -393,19 +393,19 @@ class MatchController implements ICRUD {
 
         this.logger.Info({
             path: 'Match.controller',
-            resource: 'finish:existedMatch',
+            resource: 'complete:existedMatch',
             mess: JSON.stringify(existedMatch),
         });
 
         if (typeof existedMatch === 'undefined') {
             return socket.emit('error', {
                 code: validResult.reason,
-                resource: 'match::finish',
+                resource: 'match::complete',
             });
         }
 
         socket.to(message?.matchId).emit('response', {
-            resource: 'match::finish',
+            resource: 'match::complete',
             message: 'done',
             data: {
                 reason: message?.reason,
@@ -415,7 +415,7 @@ class MatchController implements ICRUD {
         });
 
         return socket.emit('response', {
-            resource: 'match::finish',
+            resource: 'match::complete',
             message: 'done',
             data: {
                 reason: message?.reason,
